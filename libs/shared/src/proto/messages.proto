@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package mini_game;
+
+option go_package = ".;proto";
+
+message PlayerPosition {
+  string playerId = 1;
+  float x = 2;
+  float y = 3;
+  int64 timestamp = 5;
+}
+
+message MoveMessage {
+  string roomId = 1;
+  PlayerPosition position = 2;
+}
